@@ -7,12 +7,15 @@ import de.netseries.utils.Kategorie;
  */
 public class Series extends Medium {
 
-    @Override
-    public Medium create(String name, Watcher creator, Kategorie genre) {
+    private Series(String name, Watcher creator, Kategorie genre) {
         this.initLists();
         this.setName(name);
         this.setCreator(creator);
         this.setGenre(genre);
-        return new Series();
+    }
+
+    public static Medium createSeries(String name, Watcher creator, Kategorie genre) {
+
+        return new Series(name, creator, genre);
     }
 }

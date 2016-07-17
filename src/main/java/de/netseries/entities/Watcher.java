@@ -29,6 +29,7 @@ public class Watcher extends Entity {
         this.age = age;
         this.country = country;
     }
+
     public static Watcher createWatcher(String name, String username, String password, Integer age, String country) {
         initLists();
         return new Watcher(name, username, password, age, country);

@@ -10,17 +10,15 @@ import java.util.List;
  */
 public abstract class Medium extends Entity{
 
-    private List<Watcher> fans;
+    private static List<Watcher> fans;
     private Watcher creator;
-    private List<String> streamers; // TODO Service
+    private static List<String> streamers; // TODO Service
     private Kategorie genre;
 
-    public void initLists() {
-        this.fans = new ArrayList<>();
-        this.streamers = new ArrayList<>();
+    public static void initLists() {
+        fans = new ArrayList<>();
+        streamers = new ArrayList<>();
     }
-
-    public abstract Medium create(String name, Watcher creator, Kategorie genre);
 
     public void addFan(Watcher fan) {
         fans.add(fan);
