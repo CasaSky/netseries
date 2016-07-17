@@ -18,7 +18,7 @@ import static org.junit.Assert.*;
  * Created by talal on 16.07.16.
  */
 //@RunWith(SpringRunner.class)
-@SpringBootTest
+//@SpringBootTest
 @ContextConfiguration(classes = {PersistenceContext.class})
 @RunWith(SpringJUnit4ClassRunner.class)
 @DirtiesContext(classMode = DirtiesContext.ClassMode.AFTER_EACH_TEST_METHOD)
@@ -33,10 +33,7 @@ public class WatcherRepoTest {
 
     @Before
     public void initialize() {
-        talal = new Watcher();
-        talal.setName("talal");
-        talal.setUsername("talal");
-        talal.setPassword("test");
+        talal = Watcher.createWatcher("talal", "talal", "test", 0, "");
         repo.save(talal);
     }
 

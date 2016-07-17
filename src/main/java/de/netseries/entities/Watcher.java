@@ -1,5 +1,8 @@
 package de.netseries.entities;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by talal on 16.07.16.
  */
@@ -8,7 +11,30 @@ public class Watcher extends Entity {
     private String username;
     private String password;
 
+    private Integer age;
+    private String country;
+    //private static List<Medium> createdMedia;
+    //private static List<Medium> likedMedia;
+    private Long stars;
+
     public Watcher() {}
+
+   /* private static void initLists() {
+        createdMedia = new ArrayList<>();
+        likedMedia = new ArrayList<>();
+    }*/
+
+    private Watcher(String name, String username, String password, Integer age, String country) {
+        this.setName(name);
+        this.username = username;
+        this.password = password;
+        this.age = age;
+        this.country = country;
+    }
+    public static Watcher createWatcher(String name, String username, String password, Integer age, String country) {
+        //initLists();
+        return new Watcher(name, username, password, age, country);
+    }
 
     public String getUsername() {
         return username;

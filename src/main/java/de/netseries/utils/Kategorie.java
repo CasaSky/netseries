@@ -1,4 +1,4 @@
-package de.netseries.entities;
+package de.netseries.utils;
 
 /**
  * Created by talal on 17.07.16.

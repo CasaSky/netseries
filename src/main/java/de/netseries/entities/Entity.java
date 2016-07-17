@@ -16,6 +16,8 @@ public abstract class Entity {
 
     public Entity() {}
 
+    public Entity(String name) {this.name = name;}
+
     public Long getId() {
         return id;
     }
