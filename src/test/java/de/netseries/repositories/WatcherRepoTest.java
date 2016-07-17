@@ -30,18 +30,14 @@ public class WatcherRepoTest {
 
     public Watcher talal;
 
-
     @Before
     public void initialize() {
-        talal = new Watcher();
-        talal.setName("talal");
-        talal.setUsername("talal");
-        talal.setPassword("test");
+        talal = Watcher.createWatcher("talal", "talal", "test", 0, "");
         repo.save(talal);
     }
 
     @Test
-    public void saveTest() {
+    public void findByUsernameTest() {
         Watcher found = repo.findByUsername("talal");
 
         assertNotNull(found);

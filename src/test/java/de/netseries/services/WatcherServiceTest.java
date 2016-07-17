@@ -31,13 +31,9 @@ public class WatcherServiceTest {
 
     public Watcher talal;
 
-
     @Before
     public void initialize() {
-        talal = new Watcher();
-        talal.setName("talal");
-        talal.setUsername("talal");
-        talal.setPassword("test");
+        talal = Watcher.createWatcher("talal", "talal", "test", 0, "");
         service.create(talal);
     }
 
